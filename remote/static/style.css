@@ -1,0 +1,53 @@
+:root {
+  --bg: #111;
+  --button-fg: #ccc;
+  --button-bg: #333;
+  --button-fg-active: #aaa;
+  --button-bg-active: #111;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #d0d0d0;
+    --button-fg: #222;
+    --button-bg: #fff;
+    --button-fg-active: #444;
+    --button-bg-active: #ddd;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  background: var(--bg);
+}
+
+button {
+  flex-grow: 1;
+  width: calc(100% * (1 / 2));
+  padding: 1em;
+
+  color: var(--button-fg);
+  background: var(--button-bg);
+  border: 4px solid var(--bg);
+  font-size: 18pt;
+  font-family: 'Helvetica Neue', 'Noto Sans', sans-serif;
+
+  user-select: none;
+}
+
+button:active {
+  color: var(--button-fg-active);
+  background: var(--button-bg-active);
+}
+
+button:focus {
+  outline: none;
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<title>Remote</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='remote.png') }}" sizes="any">
+<link rel="apple-touch-icon" href="{{ url_for('static', filename='remote.png') }}">
+
+<button data-command="a-on">A ON</button> <button data-command="a-off">A OFF</button>
+<button data-command="b-on">B ON</button> <button data-command="b-off">B OFF</button>
+<button data-command="c-on">C ON</button> <button data-command="c-off">C OFF</button>
+<button data-command="d-on">D ON</button> <button data-command="d-off">D OFF</button>
+<script src="{{ url_for('static', filename='remote.js') }}"></script>
